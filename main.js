@@ -109,6 +109,9 @@ function getTime(sec) {
     let minutes = Math.floor(sec % SECONDS_IN_HOUR / SECONDS_IN_MINUTE);
     let seconds = sec % SECONDS_IN_MINUTE;
 
+    hours = hours < 9 ? `0${hours}` : hours;
+    minutes = minutes < 9 ? `0${minutes}` : minutes;
+    
     if (hours > 23) {
         return 'Більше одного дня'
     } else {
