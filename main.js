@@ -101,4 +101,22 @@ console.log(sumSeconds);
 
 
 //Task 6 
-// Написати функцію , яка приймає секунди, і перетворює їх у години хвилини та секунди у форматі «гг:хх:сс». якщо кількість годин більша за 23.59.59 - вивести повідомлення "Більше одного дня".
+// Написати функцію, яка приймає секунди, і перетворює їх у години хвилини та секунди у форматі «гг: хх: сс».якщо кількість годин більша за 23.59.59 - вивести повідомлення "Більше одного дня".
+
+
+function getTime(sec) {
+    let hours = Math.floor(sec / SECONDS_IN_HOUR);
+    let minutes = Math.floor(sec % SECONDS_IN_HOUR / SECONDS_IN_MINUTE);
+    let seconds = (sec % SECONDS_IN_HOUR) % SECONDS_IN_MINUTE;
+
+    if (hours > 23) {
+        return 'Більше одного дня'
+    } else {
+        return `«${hours}:${minutes}:${seconds}»`
+    }
+}
+
+let time = getTime(41200);
+console.log(time);
+time = getTime(412000);
+console.log(time);
