@@ -107,7 +107,7 @@ console.log(sumSeconds);
 function getTime(sec) {
     let hours = Math.floor(sec / SECONDS_IN_HOUR);
     let minutes = Math.floor(sec % SECONDS_IN_HOUR / SECONDS_IN_MINUTE);
-    let seconds = (sec % SECONDS_IN_HOUR) % SECONDS_IN_MINUTE;
+    let seconds = sec % SECONDS_IN_MINUTE;
 
     if (hours > 23) {
         return 'Більше одного дня'
