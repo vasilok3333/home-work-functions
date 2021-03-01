@@ -111,6 +111,7 @@ function getTime(sec) {
 
     hours = hours < 9 ? `0${hours}` : hours;
     minutes = minutes < 9 ? `0${minutes}` : minutes;
+    seconds = seconds < 9 ? `0${seconds}` : seconds;
     
     if (hours > 23) {
         return 'Більше одного дня'
